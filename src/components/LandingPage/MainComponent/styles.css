@@ -1,0 +1,101 @@
+.flex-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 3rem;
+}
+
+.track-crypto-heading,
+.real-time-heading {
+  font-size: 6.5rem;
+  margin: 0;
+}
+
+.track-crypto-heading {
+  color: var(--white);
+  transition: all 0.7s;
+}
+.track-crypto-heading:hover {
+  color: var(--black);
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: var(--white);
+}
+.real-time-heading {
+  color: var(--stripe);
+}
+
+.info-text {
+  font-size: 1rem;
+  color: var(--grey);
+}
+.btn-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.phone-container {
+  width: 50%;
+  position: relative;
+}
+
+.phone-image {
+  position: absolute;
+  z-index: 100;
+  min-width: 300px;
+  width: 50%;
+  right: 0;
+}
+
+.gradient-image {
+  position: absolute;
+  min-width: 250px;
+  width: 40%;
+  top: 6rem;
+  right: 0;
+}
+
+@media only screen and (max-width: 1250px) {
+  .track-crypto-heading,
+  .real-time-heading {
+    font-size: 5rem;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .phone-image {
+    min-width: 250px;
+    width: 50%;
+  }
+
+  .gradient-image {
+    min-width: 200px;
+    top: 6rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .flex-info {
+    flex-direction: column;
+  }
+  .phone-container {
+    display: block;
+    margin: auto;
+    margin-top: 5rem;
+  }
+  .phone-image {
+    left: -2rem;
+  }
+  .gradient-image {
+    top: 4rem;
+    left: 10%;
+  }
+  .track-crypto-heading,
+  .real-time-heading {
+    font-size: 3.5rem;
+  }
+  .btn-flex {
+    justify-content: center;
+  }
+}
