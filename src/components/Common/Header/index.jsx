@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../Button/index.jsx";
 import TemporaryDrawer from "./Drawer.jsx";
 import "./styles.css";
@@ -8,21 +9,21 @@ const Header = () => {
         Cryptic <span style={{ color: "var(--stripe)" }}>.</span>
       </h1>
       <div className='links'>
-        <a href='/'>
+        <Link to='/'>
           <p className='link'>Home</p>
-        </a>
-        <a href='/'>
+        </Link>
+        <Link to='/compare'>
           <p className='link'>Compare</p>
-        </a>
-        <a href='/'>
+        </Link>
+        <Link to='/watchlist'>
           <p className='link'>WatchList</p>
-        </a>
-        <a href='#'>
+        </Link>
+        <Link to='/dashboard'>
           <Button
             text={"Dashboard"}
             onClick={() => console.log("Btn was clicked")}
           />
-        </a>
+        </Link>
       </div>
       <div className='mobile-drawer'>
         <TemporaryDrawer />

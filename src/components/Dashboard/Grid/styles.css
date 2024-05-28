@@ -1,0 +1,121 @@
+.grid-container {
+  width: 300px;
+  height: 300px;
+  background-color: var(--darkgrey);
+  border: 2px solid var(--darkgrey);
+  border-radius: 5%;
+  padding: 1rem;
+}
+
+.grid-container:hover {
+  border-color: var(--green);
+  transition: all 0.7s;
+}
+
+.grid-container-red:hover {
+  border-color: var(--red);
+  transition: all 0.7s;
+}
+
+.info-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.coin-logo {
+  height: 4rem;
+  width: 4rem;
+}
+
+.coin-symbol {
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.coin-name {
+  color: var(--grey);
+  text-transform: capitalize;
+  font-weight: light;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.name-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chip-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1rem 1.5rem;
+}
+
+.price-chip {
+  border: 2px solid var(--green);
+  color: var(--green);
+  border-radius: 2rem;
+  padding: 0.35rem 1.25rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+.price-chip:hover,
+.icon-chip:hover {
+  background-color: var(--green);
+  color: var(--white);
+  transition: all 0.7s;
+}
+
+.chip-red {
+  border: 2px solid var(--red) !important;
+  color: var(--red) !important;
+}
+
+.chip-red:hover {
+  background-color: var(--red) !important;
+  color: var(--white) !important;
+  transition: all 0.7s;
+}
+
+.icon-chip {
+  border: 2px solid var(--green);
+  color: var(--green);
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin-info {
+  margin-top: 1.5rem;
+}
+
+.coin-price {
+  color: var(--green);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.coin-details {
+  color: var(--grey);
+  font-size: 1rem;
+}
+
+/* 3:30:34 */
