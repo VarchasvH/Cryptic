@@ -5,12 +5,14 @@ import Header from "../components/Common/Header/index.jsx";
 import TabsComponent from "../components/Dashboard/TabsComponent/index.jsx";
 import SearchBar from "../components/Dashboard/SearchBar/index.jsx";
 import PaginationComponent from "../components/Dashboard/Pagination/index.jsx";
+import Loader from "../components/Common/Loader/index.jsx";
 
 const DashboardPage = () => {
   const [coins, setCoins] = useState([]);
   const [paginatedCoins, setPaginatedCoins] = useState([]);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
 
   const handlePageChange = (event, value) => {
     setPage(value);
@@ -38,14 +40,18 @@ const DashboardPage = () => {
         })
         .then((response) => {
           if (response.data && response.data.data) {
-            setCoins(response.data.data);
-            setPaginatedCoins(coins.slice(0, 10));
+            const coinData = response.data.data;
+            setCoins(coinData);
+            setPaginatedCoins(coinData.slice(0, 10));
+            setIsLoading(false);
           } else {
             console.error("Unexpected response structure:", response.data);
+            setIsLoading(false);
           }
         })
         .catch((error) => {
           console.error("API request error:", error);
+          setIsLoading(false);
         });
     };
     getCoins();
@@ -53,11 +59,20 @@ const DashboardPage = () => {
 
   return (
     <>
-      <Header />
-      <SearchBar search={search} onSearchChange={onSearchChange} />
-      <TabsComponent coins={search ? filteredCoin : paginatedCoins} />
-      {!search && (
-        <PaginationComponent page={page} handlePageChange={handlePageChange} />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <div>
+          <Header />
+          <SearchBar search={search} onSearchChange={onSearchChange} />
+          <TabsComponent coins={search ? filteredCoin : paginatedCoins} />
+          {!search && (
+            <PaginationComponent
+              page={page}
+              handlePageChange={handlePageChange}
+            />
+          )}
+        </div>
       )}
     </>
   );
