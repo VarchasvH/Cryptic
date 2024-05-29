@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import "./styles.css";
-
 import Pagination from "@mui/material/Pagination";
 
 export default function PaginationControlled({ page, handlePageChange }) {
@@ -15,7 +14,7 @@ export default function PaginationControlled({ page, handlePageChange }) {
           "& .MuiPaginationItem-text:hover": {
             backgroundColor: "transparent !important",
           },
-          "& .Mui-selected  ": {
+          "& .Mui-selected": {
             backgroundColor: "var(--stripe)",
             borderColor: "var(--stripe)",
           },
