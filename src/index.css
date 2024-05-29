@@ -61,3 +61,13 @@ img {
   -moz-user-drag: none;
   -o-user-drag: none;
 }
+
+.grey-wrapper {
+  display: block;
+  width: 90%;
+  padding: 0rem 0.5rem;
+
+  background-color: var(--darkgrey);
+  margin: 1.5rem auto;
+  border-radius: 0.8rem;
+}
