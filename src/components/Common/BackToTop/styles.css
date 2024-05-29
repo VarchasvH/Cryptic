@@ -1,0 +1,30 @@
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid var(--stripe);
+  border-radius: 50%;
+  margin: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: var(--stripe);
+  color: var(--white);
+  box-shadow: 5px 5px 10px #6c76e3b9;
+}
+
+.back-to-top:hover .icon {
+  color: var(--white) !important;
+}
+
+.icon {
+  color: var(--stripe);
+  transition: color 0.3s;
+}

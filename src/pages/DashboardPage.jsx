@@ -6,6 +6,7 @@ import TabsComponent from "../components/Dashboard/TabsComponent/index.jsx";
 import SearchBar from "../components/Dashboard/SearchBar/index.jsx";
 import PaginationComponent from "../components/Dashboard/Pagination/index.jsx";
 import Loader from "../components/Common/Loader/index.jsx";
+import BackToTop from "../components/Common/BackToTop/index.jsx";
 
 const DashboardPage = () => {
   const [coins, setCoins] = useState([]);
@@ -64,6 +65,7 @@ const DashboardPage = () => {
       ) : (
         <div>
           <Header />
+          <BackToTop />
           <SearchBar search={search} onSearchChange={onSearchChange} />
           <TabsComponent coins={search ? filteredCoin : paginatedCoins} />
           {!search && (

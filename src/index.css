@@ -25,6 +25,10 @@
   --red: #f94141;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::selection {
   background-color: var(--stripe);
   color: var(--white);
