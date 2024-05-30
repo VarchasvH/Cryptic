@@ -28,7 +28,8 @@
   text-align: center;
 }
 
-.icon-chip-list {
+.icon-chip-list,
+.price-chip-list {
   border: 2px solid var(--green);
   color: var(--green);
   border-radius: 50%;
@@ -37,23 +38,17 @@
   text-align: center;
   font-weight: 600;
   font-size: 1.1rem;
-  margin-top: 0rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .price-chip-list {
-  border: 2px solid var(--green);
-  color: var(--green);
   border-radius: 2rem;
   padding: 0.35rem 1.25rem;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.1rem;
   min-width: 2rem;
-  display: flex;
-  justify-content: center;
 }
+
 .price-chip-list:hover,
 .icon-chip-list:hover {
   background-color: var(--green);
@@ -64,6 +59,7 @@
 .coin-details-list {
   color: var(--white);
 }
+
 .mobile-td-mkt {
   display: none;
 }

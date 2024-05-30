@@ -1,8 +1,17 @@
+html,
+body {
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  margin: 0; /* Remove default margin */
+  height: 100%;
+}
+
 .flex-info {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 0.5rem 3rem;
+  height: 100vh; /* Ensure the container takes the full viewport height */
+  overflow: hidden; /* Prevent overflow */
 }
 
 .track-crypto-heading,
@@ -28,6 +37,7 @@
   font-size: 1rem;
   color: var(--grey);
 }
+
 .btn-flex {
   display: flex;
   justify-content: flex-start;
@@ -64,6 +74,7 @@
     margin: 0;
   }
 }
+
 @media only screen and (max-width: 1000px) {
   .phone-image {
     min-width: 250px;
@@ -75,9 +86,11 @@
     top: 6rem;
   }
 }
+
 @media only screen and (max-width: 800px) {
   .flex-info {
     flex-direction: column;
+    height: auto; /* Allow height to adjust for smaller screens */
   }
   .phone-container {
     display: block;
