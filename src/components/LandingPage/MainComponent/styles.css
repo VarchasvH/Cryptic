@@ -11,7 +11,7 @@ body {
   align-items: flex-start;
   padding: 0.5rem 3rem;
   height: 100vh; /* Ensure the container takes the full viewport height */
-  overflow: hidden; /* Prevent overflow */
+  /* Prevent overflow */
 }
 
 .track-crypto-heading,
