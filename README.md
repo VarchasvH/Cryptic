@@ -2,6 +2,10 @@
 
 Crypto Dashboard is a web application that provides real-time data and historical charts for various cryptocurrencies.
 
+https://github.com/VarchasvH/Cryptic/assets/100064742/a7b9a415-45e7-445f-971b-e17a3b2d00bc
+
+
+
 ## Features
 
 - **Real-time Data**: Get the latest information about cryptocurrencies, including current price, market cap, and price change percentage over 24 hours.
